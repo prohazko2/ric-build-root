@@ -1,0 +1,29 @@
+{
+  "name": "ric-build-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "esbuild-loader": "^2.13.1",
+    "react-grid-layout": "^1.2.5",
+    "style-loader": "^2.0.0",
+    "svg-sprite-loader": "^6.0.7",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "build": "webpack --progress --profile",
+    "watch": "webpack --progress --profile --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prohazko2/ric-build-root.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prohazko2/ric-build-root/issues"
+  },
+  "homepage": "https://github.com/prohazko2/ric-build-root#readme"
+}

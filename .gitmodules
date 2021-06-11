@@ -1,0 +1,3 @@
+[submodule "user_modules/examples"]
+	path = user_modules/examples
+	url = https://github.com/prohazko2/ric-user-module.git
