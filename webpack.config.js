@@ -1,17 +1,21 @@
-const fs = require("fs");
 const path = require("path");
+const glob = require("glob");
 
 const env = process.env["NODE_ENV"] || "development";
 
 const config = {
   entry: {
-    examples: "./user_modules/examples/js/index.tsx",
+    //examples: "./user_modules/examples/js/index.tsx",
   },
   mode: env,
-  watch: env === "development",
   devtool: "source-map",
+
   experiments: {
     topLevelAwait: true,
+  },
+
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
 
   module: {
@@ -50,16 +54,20 @@ const config = {
       },
     ],
   },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js", ".css"],
-  },
   externals: {
-    common: "common",
+    /* ric internal libs */
     util: "util",
+    common: "common",
     ui: "ui",
 
+    /* already bundled libs, 
+       but you can provide your own */
+    jquery: "jquery",
+    leaflet: "leaflet",
     react: "react",
     "react-dom": "react-dom",
+    mobx: "mobx",
+    "mobx-react": "mobx-react",
   },
   output: {
     publicPath: "/",
@@ -70,5 +78,11 @@ const config = {
   },
   plugins: [],
 };
+
+glob.sync("user_modules/*/js/index.{ts,tsx}").forEach((file) => {
+  const full = path.resolve(__dirname, file);
+  const name = path.basename(path.dirname(path.resolve(full, "..")));
+  config.entry[name] = full;
+});
 
 module.exports = config;
