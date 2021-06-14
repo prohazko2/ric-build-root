@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "webpack --progress --profile",
-    "watch": "webpack --progress --profile --watch"
+    "watch": "webpack --progress --profile --watch",
+    "postinstall": "find ./user_modules/* -name package.json -maxdepth 1 -execdir npm install \\;"
   },
   "repository": {
     "type": "git",
