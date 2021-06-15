@@ -1,8 +1,12 @@
 {
   "name": "ric-build-root",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "user_modules/*"
+  ],
   "devDependencies": {
     "@types/react": "^17.0.11",
     "css-loader": "^5.2.6",
@@ -17,8 +21,7 @@
   },
   "scripts": {
     "build": "webpack --progress --profile",
-    "watch": "webpack --progress --profile --watch",
-    "deepinstall": "node deepinstall.js"
+    "watch": "webpack --progress --profile --watch"
   },
   "repository": {
     "type": "git",
