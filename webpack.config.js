@@ -52,6 +52,10 @@ const config = {
         test: /\.svg$/,
         loader: "svg-sprite-loader",
       },
+      {
+        test: /\.jade$/,
+        loader: "pug-loader",
+      },
     ],
   },
   externals: {
