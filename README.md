@@ -7,6 +7,6 @@ Minimal webpack configuration for Rightech IoT user modules development
 ```sh
 > git submodule update --init --recursive
 > yarn install
-> npm run build
+> yarn run build
 > ./run.sh
 ```
