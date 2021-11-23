@@ -8,5 +8,5 @@ Minimal webpack configuration for Rightech IoT user modules development
 > git submodule update --init --recursive
 > yarn install
 > yarn run build
-> ./run.sh
+> docker-compose up
 ```
