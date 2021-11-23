@@ -51,6 +51,7 @@ const config = {
       {
         test: /\.svg$/,
         loader: "svg-sprite-loader",
+        options: { name: "[name]_[hash]", symbolId: "[name]-[hash:6]" },
       },
       {
         test: /\.jade$/,
