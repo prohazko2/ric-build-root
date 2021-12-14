@@ -20,7 +20,7 @@ Minimal webpack configuration for Rightech IoT user modules development
 > yarn watch
 ```
 
-You only need to restart `docker-compose` when you:
+You only need to restart `docker-compose up` when you:
 - update `user_modules/*/index.js` and referenced files
 - install new `node_modules` required from `user_modules/*/index.js`
 
