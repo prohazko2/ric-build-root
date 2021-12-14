@@ -8,8 +8,7 @@ Minimal webpack configuration for Rightech IoT user modules development
 
 ```sh
 > git submodule update --init --recursive
-> yarn install
-> yarn build
+> yarn install && yarn build
 > docker-compose up
 ```
 
@@ -26,4 +25,4 @@ You only need to restart `docker-compose up` when you:
 
 You only need to restart `yarn watch` when you:
 - update `webpack.config.js`
-- feel something wrong
+- feel something wrong (and/or nothing works)

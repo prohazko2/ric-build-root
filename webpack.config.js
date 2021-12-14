@@ -60,10 +60,15 @@ const config = {
     ],
   },
   externals: {
-    /* ric internal libs */
+    /* ric internal libs - legacy */
     util: "util",
     common: "common",
     ui: "ui",
+
+    /* ric internal libs - modern alias */
+    "@rightech/ui": "@rightech/ui",
+    "@rightech/ui/core": "@rightech/ui/core",
+    "@rightech/ui/util": "@rightech/ui/util",
 
     /* already bundled libs, 
        but you can provide your own */
