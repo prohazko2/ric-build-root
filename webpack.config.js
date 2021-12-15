@@ -70,12 +70,28 @@ const config = {
     "@rightech/ui/core": "@rightech/ui/core",
     "@rightech/ui/util": "@rightech/ui/util",
 
+    /* runtimes */
+    "jade/lib/runtime": "jade/lib/runtime",
+    "core-js/stable": "core-js/stable",
+    "regenerator-runtime/runtime": "regenerator-runtime/runtime",
+
     /* already bundled libs, 
        but you can provide your own */
     jquery: "jquery",
+    slickgrid: "slickgrid",
+    "popper.js": "popper",
+
     leaflet: "leaflet",
+    "leaflet-routing-machine": "leaflet-routing-machine",
+
     react: "react",
     "react-dom": "react-dom",
+    "prop-types": "prop-types",
+    "react-select": "react-select",
+    "fixed-data-table-2": "fixed-data-table-2",
+    "react-markdown": "react-markdown",
+    "react-virtualized": "react-virtualized",
+
     mobx: "mobx",
     "mobx-react": "mobx-react",
   },
