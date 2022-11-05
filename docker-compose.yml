@@ -22,8 +22,20 @@ services:
     ports:
       - 6379:6379
 
+  pgts:
+    image: timescale/timescaledb:2.8.1-pg14
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=rightech
+    volumes: 
+      - /data/pgts:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
   ric-web:
-    image: ric-web:2.5.6-rc7
+    image: ric-web:2.11.1-rc2
     restart: always
     depends_on:
       - mongodb
