@@ -5,7 +5,7 @@ services:
     image: mongo:5.0.4
     restart: always
     volumes: 
-      - /data/db:/data/db
+      - mongodb:/data/db
     ports:
       - 27017:27017
 
@@ -30,7 +30,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=rightech
     volumes: 
-      - /data/pgts:/var/lib/postgresql/data
+      - pgts:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
@@ -47,3 +47,7 @@ services:
     volumes:
      - "./user_modules:/user_modules"
      - "./node_modules:/node_modules"
+
+volumes:
+  mongodb:
+  pgts:
