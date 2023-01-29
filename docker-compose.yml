@@ -64,3 +64,4 @@ services:
 volumes:
   mongodb:
   pgts:
+  minio:
