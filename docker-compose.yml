@@ -48,7 +48,7 @@ services:
       - MINIO_SECRET_KEY=minio12345
 
   ric-web:
-    image: ric-web:2.12.4-rc2
+    image: ric-web:2.29.2-rc1
     restart: always
     depends_on:
       - mongodb
